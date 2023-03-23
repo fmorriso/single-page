@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="utf-8">
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta content="Frederick Morrison" name="author">
+        <title>Single Page HTML Example</title>
+        <link href="main.css" rel="stylesheet">
+</head>
+<body>
+        <h1>Simple Single Page HTML Application</h1>
+        <div>
+                <span>
+                        <button onclick="showDate()" type="button">Show Date</button>
+                        <label id="displayDate"></label>
+                </span>
+        </div>
+        <div>
+                <span>
+                        <button onclick="showTime()" type="button">Show Time</button>
+                        <label id="displayTime"></label>
+                </span>
+        </div>
+        <br>
+        <div>
+                <button id="show" onclick="showH2()">Show</button>
+        </div>
+        <div>
+                <button id="hide" onclick="hideH2()">Hide</button>
+        </div>
+        <div class="dynamic">
+                <h2 id="dynamic">This will show/hide dynamically</h2>
+        </div>
+
+        <script crossorigin="anonymous" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8="
+                src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+        <script src="main.js"></script>
+</body>
+</html>

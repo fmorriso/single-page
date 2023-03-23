@@ -1,0 +1,8 @@
+body {
+    font-family: 'sans-serif','Courier New','system-ui';
+}
+.dynamic {
+    height: 2rem;
+    min-height: 2rem;
+    max-height: 2rem;
+}
