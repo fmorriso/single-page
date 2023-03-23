@@ -19,25 +19,23 @@ function showDate() {
 
 function showTime() {
     let currentDate = new Date();
-    let h = twoDigits(currentDate.getUTCHours());
-    let m = twoDigits(currentDate.getUTCMinutes());
-    let s = twoDigits(currentDate.getUTCSeconds());
+    let h = twoDigits(currentDate.getHours());
+    let m = twoDigits(currentDate.getMinutes());
+    let s = twoDigits(currentDate.getSeconds());
     let time = h + ":" + m + ":" + s;
     $("label#displayTime").text(time);
 }
 
 // following line is shorthand equivalent to:
-// function showH2()
-const showH2 = () => {
-    $("h2#dynamic").show();
-    $("button#show").prop('disabled', true);
-    $("button#hide").prop('disabled', false);
-}
-
-function hideH2() {
-    $("h2#dynamic").hide();
-    $("button#show").prop('disabled', false);
-    $("button#hide").prop('disabled', true);
+// function toggleH2()
+const toggleH2 = () => {
+    if($("h2#dynamic").is(':visible'))  {
+        $("h2#dynamic").hide();
+        $("button#toggle").text('Show')
+    } else {
+        $("h2#dynamic").show();
+        $("button#toggle").text('Hide')
+    }
 }
 
 // the following will execute when the page finishes loading
